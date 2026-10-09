@@ -5,7 +5,7 @@ const PORT = process.env.PORT;
 
 
 app.get('/', (req, res) => {
-  res.send('Hello World\n This is a test for Git Flow');
+  res.send('Hello World');
   });
 
 app.get('/health', (req, res) => {
