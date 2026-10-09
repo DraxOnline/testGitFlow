@@ -1,19 +1,4 @@
-import express from 'express' 
+import { app } from "./app.js";
 
-const app = express();
-const PORT = process.env.PORT;
-
-
-app.get('/', (req, res) => {
-  res.send('Hello World');
-  });
-
-app.get('/health', (req, res) => {
-  res.json({ 
-    status: 'UP',
-    timestamp: new Date().toISOString()});
-})
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port: ${PORT}`);
-} )
+const port = Number(process.env.PORT ?? 3000);
+app.listen(port, () => console.log(`Server is running on port: ${port}`));
